@@ -7,10 +7,10 @@
 }
 
 :root{
-    --mainClor:red;
-    --mainColorLight:blue;
+    --mainColor:red;
+    --mainColorLight:rgba(133, 133, 220, 0.311);
     --secondaryColor:green;
-    --textColor:#eeee;
+    --textColor:#941d1dee;
 }
 
 header{
@@ -19,7 +19,7 @@ header{
     align-items:center;
     height:80px;
     padding:0 2rem;
-    background-color:var(--mainClor);
+    background-color:var(--mainColorLight);
     color:var(--textColor);
 }
 
@@ -63,8 +63,22 @@ header .nav-btn{
         background-color: var(--mainClor);
         transition: 1s;
         transform: translateY(-100vh);
+        flex-direction: column;
     }
     header nav.active{
         transform: none;
     }
+
+    nav.nav-close-btn{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: var(--textColor);
+    }
+    nav a{
+        font-size: 2rem;
+        color: var(--textColor);
+    }
+    
 }

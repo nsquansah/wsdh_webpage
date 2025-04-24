@@ -7,7 +7,7 @@ import "../styles/main.css";
 function NavBar() {
     const navRef = useRef();
     const showNavbar = () => {
-        navRef.current.classList.toggle("responsive_nav");
+        navRef.current.classList.toggle("active");
     }
    
   
@@ -21,7 +21,7 @@ function NavBar() {
                 <a href="/services">Services</a>
                 <a href="/contact">Contact</a>
                 <a href="/login">Login</a>
-                <button className='nav-btn nav-close-btn' onclick={showNavbar}>
+                <button className='nav-btn nav-close-btn' onClick={showNavbar}>
                 <FaTimes/>
                 </button>
             </nav>

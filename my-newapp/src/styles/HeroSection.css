@@ -26,6 +26,20 @@ hero-section{
     z-index: 2; /* Make sure the text is above the image */
   }
 
+  .whatwedo{
+   color:  rgba(255, 0, 0, 0.8);
+    font-size: 2rem;
+     
+ }
+
+ .summary1,.summary2,.summary3{
+  color: rgb(211, 205, 205);
+  font-weight: bolder;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+ }
+ 
+
   @media only screen and (max-width: 1024px){
     .hero-image {
       height: 50vh;
@@ -36,4 +50,55 @@ hero-section{
       width: 30%;
       top: 40%;
           }
+}
+
+
+
+.btn {
+position: relative;
+padding: 1.5rem 3rem;
+font-size: 1.1rem;
+font-weight: 600;
+color: #fff;
+background: none;
+border: none;
+cursor: pointer;
+overflow: hidden;
+transition: all 0.4s ease;
+min-width: 200px;
+z-index: 1;
+margin-top: 2rem;
+}
+
+.neon-pulse {
+background: #000;
+border: 2px solid rgb(255, 4, 0);
+box-shadow: 0 0 10px rgba(188, 91, 76, 0.44);
+overflow: visible;
+}
+
+.neon-pulse::before,
+.neon-pulse::after {
+content: "";
+position: absolute;
+inset: -4px;
+border: 2px solid rgb(149, 62, 50);
+border-radius: inherit;
+animation: pulseOut 2s ease-out infinite;
+opacity: 0;
+}
+
+.neon-pulse::after {
+animation-delay: 1s;
+}
+
+@keyframes pulseOut {
+0% {
+  transform: scale(1);
+  opacity: 1;
+}
+100% {
+  transform: scale(1.5);
+  opacity: 0;
+}
 }

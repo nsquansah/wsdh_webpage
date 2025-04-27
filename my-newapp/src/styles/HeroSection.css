@@ -1,0 +1,39 @@
+hero-section{
+   width: 100%;
+    height: 100vh;
+    overflow: hidden;
+   
+   
+}
+
+.hero-image {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover; /* VERY important: makes sure the image covers nicely */
+    z-index: 1;
+
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    width: 100%;
+
+    z-index: 2; /* Make sure the text is above the image */
+  }
+
+  @media only screen and (max-width: 1024px){
+    .hero-image {
+      height: 50vh;
+    }
+
+    .hero-text {
+      left: 15%;
+      width: 30%;
+      top: 40%;
+          }
+}

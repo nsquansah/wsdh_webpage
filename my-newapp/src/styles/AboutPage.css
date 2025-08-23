@@ -79,6 +79,7 @@
     object-fit: cover;
     border-radius: 10px;
     transition: all 1s ease-in-out;
+    margin-bottom: 5rem;
   }
   
   .arrow {
@@ -102,7 +103,18 @@
   .right-arrow {
     right: 20px;
   }
+  .knowus{
+    color: rgb(222, 30, 30);
+    cursor: pointer;
+    padding: 2rem;
+    margin-right: 10rem;
+  }
+
+  .knowus:hover{
+    color: whitesmoke;
+    font-size: large;
   
+  }
 
   @media only screen and (max-width: 1024px){
 
@@ -120,5 +132,9 @@
     }
 
     .carousel{display:none}
+
+    .knowus{
+      margin-left: 18%;
+    }
 
   }

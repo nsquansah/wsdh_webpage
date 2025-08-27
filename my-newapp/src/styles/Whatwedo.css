@@ -161,4 +161,8 @@
         display: none;
     }
     .circle{display:none;}
+
+    .what-we-do-section{
+        height:2vh;
+    }
   }

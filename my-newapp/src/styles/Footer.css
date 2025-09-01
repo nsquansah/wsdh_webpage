@@ -1,0 +1,104 @@
+.footer_container {
+    background-color:rgb(18, 19, 15);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    min-height: 50vh;
+}
+
+.footer {
+  background: #111;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* 3 sections */
+  gap: 20px;
+  padding: 40px 60px;
+  align-items: center;
+
+
+}
+
+
+.footer-middle,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-right {
+  align-items: center;
+  text-align: right;
+}
+
+.footer-logo {
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.footer-middle p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 10px;
+  
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  /* align-self: center; */
+  color: rgba(255, 0, 0, 0.968); 
+}
+
+.footer-right p {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contactus {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.contactus:hover {
+  color: rgba(255, 0, 0, 0.968);
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #0ff; /* hover effect */.footer-logo {
+  width: 1rem;
+  border-radius: 50%;
+}
+
+}
+
+.address {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr; /* Stack sections */
+    text-align: center;
+  }
+  .footer-left, .footer-middle, .footer-right {
+    align-items: center;
+  }
+}

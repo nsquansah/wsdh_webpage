@@ -3,6 +3,8 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
+    
+    
 
 }
 
@@ -22,8 +24,9 @@ header{
     background-color:var(--mainColorLight);
     color:var(--textColor);
     border-bottom: 1px solid rgba(255, 0, 0, 0.5);
-    
-    
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 nav a{
@@ -87,7 +90,7 @@ header .nav-btn{
         color: var(--textColor);
     }
     nav a{
-        font-size: 2rem;
+        font-size: 1rem;
         color: var(--textColor);
     }
     header{

@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import "../styles/main.css";
 // import '../components/Logo';
 import Logo from './Logo';
+import { Link } from "react-router-dom";
 
 
 function NavBar() {
@@ -18,11 +19,12 @@ function NavBar() {
         <header>
             <Logo />
             <nav  ref={navRef}> 
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/services">Services</a>
-                <a href="/contact">Contact</a>
-                <a href="/login">Login</a>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to='/projects'>Projects</Link>
+                <Link to="/blog">Blog</Link>
+                <Link to="/Products">Products</Link>
+                <Link to="/contact">Contact Us</Link>
                 <button className='nav-btn nav-close-btn' onClick={showNavbar}>
                 <FaTimes/>
                 </button>

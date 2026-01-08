@@ -23,7 +23,7 @@ const Footer = () => {
       {/* RIGHT SECTION */}
       <div className="footer-right">
         <h3 className="contactus">Contact Us</h3>
-        <p className="email"><MdEmail /><a href="mailto:wellskillsdevelopmenthub@gmail.com"> wellskillsdevelopmenthub@gmail.com</a></p>
+        <p className="email"><MdEmail /><a className="wellskills" href="mailto:wellskillsdevelopmenthub@gmail.com"> wellskillsdevelopmenthub@gmail.com</a></p>
         <div className="social-icons">
           <a href="#"><FaFacebook /></a>
           <a href="#"><FaInstagram /></a>

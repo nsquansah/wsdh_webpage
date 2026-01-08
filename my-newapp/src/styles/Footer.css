@@ -63,6 +63,16 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
+.email{
+  color: rgba(255, 0, 0, 0.968);
+  font-weight: bold;
+}
+.wellskills{
+  color: rgba(255, 0, 0, 0.968);
+  font-size: 1.2rem;
+  text-decoration: none;
+
+}
 .contactus:hover {
   color: rgba(255, 0, 0, 0.968);
 }
@@ -89,7 +99,9 @@
 
 .address {
   font-size: 13px;
-  color: #aaa;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
 }
 
 /* Responsive Design */
@@ -97,8 +109,16 @@
   .footer {
     grid-template-columns: 1fr; /* Stack sections */
     text-align: center;
+    
   }
   .footer-left, .footer-middle, .footer-right {
     align-items: center;
   }
+  .contactus {
+    text-align: center;
+    padding-top: 1rem;
+    
+  
+}
+
 }

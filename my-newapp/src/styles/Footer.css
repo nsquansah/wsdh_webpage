@@ -99,7 +99,9 @@
 
 .address {
   font-size: 13px;
-  color: #aaa;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
 }
 
 /* Responsive Design */
@@ -107,9 +109,16 @@
   .footer {
     grid-template-columns: 1fr; /* Stack sections */
     text-align: center;
+    
   }
   .footer-left, .footer-middle, .footer-right {
     align-items: center;
   }
+  .contactus {
+    text-align: center;
+    padding-top: 1rem;
+    
+  
 }
 
+}

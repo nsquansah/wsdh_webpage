@@ -125,6 +125,8 @@
     .about-text, .mission-text, .vision-text{
       width: 90%;
       padding: 0.5rem;
+      margin-left: 1rem;
+      text-align: justify;
     }
 
     .womenempowerment{
@@ -135,6 +137,10 @@
 
     .knowus{
       margin-left: 18%;
+    }
+
+    .about, .mission, .vision{
+      margin-left: 7rem;
     }
 
   }

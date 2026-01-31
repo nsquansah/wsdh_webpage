@@ -1,5 +1,6 @@
-import React from 'react'
-import { FaCalendarAlt } from "react-icons/fa";  // calendar icon
+import React from 'react';
+import CountUp from 'react-countup';
+import { FaCalendarAlt } from "react-icons/fa";
 import { GiCheckMark } from "react-icons/gi";
 import { FaPeopleGroup } from "react-icons/fa6";
 import '../styles/Whatwedo.css';
@@ -7,27 +8,31 @@ import '../styles/Whatwedo.css';
 const Whatwedo = () => {
   return (
     <div className="what-we-do-section">
-        <div className="icon-container">
-            <div className="circle">
-             <FaCalendarAlt size={32} color="#111" /> 
-            </div>
-    
-                 <div className="checkmark">
-                     <GiCheckMark size={32} color="#111" />
-                         </div>
-                             <div className="people-group">
-                                <FaPeopleGroup size={32} color="#111" />
-                                </div>
-      </div>
-      <div className="icon-labels">
-           <p className="icon-label1">Existence <span className='first'>+5 years</span></p>
-           <p className="icon-label2">Projects completed <span className='second'>+10</span></p>
-           <p className="icon-label3">Beneficiaries<span className='third'>400+</span></p>
+      <div className="bordered-box">
+
+        <h1 className='num'>
+          <CountUp start={0} end={8} duration={2} />
+        </h1>
+        <h2 className='intext'>YEARS OF IMPACT</h2>
+
+        <h1 className='num'>
+          <CountUp start={0} end={10} duration={2.5} />+
+        </h1>
+        <h2 className='intext'>Superb Volunteers</h2>
+
+        <h1 className='num'>
+          <CountUp start={0} end={10} duration={2} />+
+        </h1>
+        <h2 className='intext'>Successful Projects</h2>
+
+        <h1 className='num'>
+          <CountUp start={0} end={1000} duration={3} />+
+        </h1>
+        <h2 className='intext'>Beneficiaries Impacted</h2>
+
       </div>
     </div>
-
-    
-  )
-}
+  );
+};
 
 export default Whatwedo;

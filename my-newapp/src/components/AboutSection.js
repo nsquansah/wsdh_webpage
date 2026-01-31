@@ -38,7 +38,6 @@ function AboutPage() {
                    
                     <div className="vision">Vision</div>
                       <p className="vision-text">A future where every woman and young person, regardless of their background, has the power to innovate, the skills to thrive, and the confidence to lead their communities towards a more prosperous future.</p>
-                      <p className="knowus"> click to know us more  « «</p>
           </div>
          
          

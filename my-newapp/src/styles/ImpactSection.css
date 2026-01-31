@@ -1,0 +1,187 @@
+/* ===== Section Wrapper ===== */
+.impact-section {
+  padding: 2rem 2rem;
+  background-color: rgba(22, 19, 13, 0.95);
+  color: hsl(0, 0%, 100%);
+}
+
+/* ===== GREEN HOVER GLOW EFFECT ===== */
+.impact-container {
+  position: relative;          /* REQUIRED */
+  z-index: 1;
+}
+
+/* SHADOW LAYERS */
+.impact-container::before,
+.impact-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0%;
+
+  background: rgba(34, 197, 94, 0.35);   /* GREEN */
+  filter: blur(90px);
+
+  transition: width 0.6s ease;
+  z-index: -1;            /* BEHIND CONTENT */
+  pointer-events: none;   /* don’t block hover */
+}
+
+/* LEFT */
+.impact-container::before {
+  left: 0;
+}
+
+/* RIGHT */
+.impact-container::after {
+  right: 0;
+}
+
+/* ON HOVER – SLIDE IN */
+.impact-container:hover::before,
+.impact-container:hover::after {
+  width: 45%;
+}
+
+
+
+/* ===== Main Container (2 columns) ===== */
+.impact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* ===== Left Column ===== */
+.left-column {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  ;
+}
+
+/* Vision Text */
+.vision-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4rem;
+  line-height: 1.3;
+}
+
+/* ===== Donate Button ===== */
+.donate-button {
+  width: fit-content;
+  padding: 0.8rem 2.2rem;
+  background: linear-gradient(135deg, red, #431211);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  margin-left: 9rem;
+}
+
+.donate-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.45);
+}
+
+.donate-button:active {
+  transform: translateY(-1px);
+}
+
+/* ===== Right Column (Cards Grid) ===== */
+.right-column {
+  flex: 2;
+  align-items: flex-start;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-left: 8rem;
+  min-width: 300px;
+  display: grid;
+  
+}
+
+/* ===== Individual Card ===== */
+.impact-card {
+  background-color: rgba(173, 140, 140, 0.85);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: 100%;
+  width: 400px;
+
+  /* IMPORTANT – LEFT ALIGN SETUP */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(151, 33, 33, 0.45);
+}
+
+/* ===== Card Content ===== */
+
+/* Emoji stays on top but left aligned */
+.card-emoji {
+  font-size: 2rem;
+  margin-bottom: 0.6rem;
+  align-self: flex-start;
+}
+
+/* Title starts from same left line */
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: hsl(0, 0%, 100%);
+
+}
+
+/* Description also starts same line */
+.card-description {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 2rem;
+  
+
+}
+
+/* ===== Responsive (Mobile) ===== */
+@media (max-width: 768px) {
+  .impact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .impact-container :hover{
+    transform: none;
+    box-shadow: none;
+  }
+
+  .right-column {
+    grid-template-columns: 1fr;
+    margin-right: 8rem;
+  }
+
+  .donate-button {
+    align-self: center;
+    margin-right: 9rem;
+  }
+}

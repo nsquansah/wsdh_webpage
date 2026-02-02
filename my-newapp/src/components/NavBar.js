@@ -22,8 +22,8 @@ function NavBar() {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to='/projects'>Projects</Link>
-                <Link to="/blog">Blog</Link>
-                <Link to="/Products">Products</Link>
+                <Link to="/blog">Our Blog</Link>
+                <Link to="/Products">Impact Products</Link>
                 <Link to="/contact">Contact Us</Link>
                 <button className='nav-btn nav-close-btn' onClick={showNavbar}>
                 <FaTimes/>

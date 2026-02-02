@@ -61,6 +61,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 8rem; 
   ;
 }
 
@@ -87,7 +88,7 @@
   letter-spacing: 0.5px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
-  margin-left: 9rem;
+  margin-left: 8rem;
 }
 
 .donate-button:hover {
@@ -168,6 +169,8 @@
   .impact-container {
     flex-direction: column;
     text-align: center;
+    
+    
   }
 
   .impact-container :hover{
@@ -182,6 +185,11 @@
 
   .donate-button {
     align-self: center;
-    margin-right: 9rem;
+    margin-right: 6rem;
+    margin-top: 0.1rem;
+  }
+
+  .left-column{
+    margin-left: 5rem;
   }
 }

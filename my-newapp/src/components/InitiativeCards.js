@@ -1,70 +1,91 @@
-import React from "react";
-import { FaShareAlt } from "react-icons/fa";
+import React, { useRef } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import "../styles/InitiativeCards.css";
+import { FaShareAlt } from "react-icons/fa";
 
-const cards = [
-  { title: "Girls in Tech Program", desc: "Training young girls in digital skills, coding and online safety." },
-  { title: "Women Agribusiness", desc: "Seedlings, tools and market access for rural women farmers." },
-  { title: "Literacy for All", desc: "Community reading clubs and after-school lessons." },
-  { title: "Health Awareness", desc: "Reproductive health education for adolescent girls." },
-  { title: "Entrepreneurship Hub", desc: "Business and product formulation training." },
+const cardsData = [
+  {
+    title: "Girls in Tech Program",
+    desc: "Training young girls in digital skills, coding and online safety.",
+    img: "/images/project-momentum.jpg" // Replace with actual path
+  },
+  {
+    title: "Women Agribusiness",
+    desc: "Seedlings, tools and market access for rural women farmers. ",
+    img: "/images/chess-slums.jpg"
+  },
+  {
+    title: "Literacy for All",
+    desc: "Community reading clubs and after-school lessons .",
+    img: "/images/click4change.jpg"
+  },
+
+  {
+    title: "Reproductive Health Awareness",
+    desc: "Reproductive health education for adolescent girls.",
+    img: "/images/click4change.jpg"
+
+  },
+
+  {
+    title: "Entrepreneurship Hub",
+    desc: "Business and product formulation training",
+    img: "/images/click4change.jpg"
+
+  }
 ];
 
 const InitiativeCarousel = () => {
-  const infiniteCards = [...cards, ...cards];
+  const scrollRef = useRef(null);
 
-  const handleShare = (card) => {
-    const shareUrl = window.location.href;
-    const shareText = `Check out this initiative: ${card.title}`;
-
-    // Priority 1: Native Share (Works on Mobile/Safari)
-    if (navigator.share) {
-      navigator.share({
-        title: card.title,
-        text: shareText,
-        url: shareUrl,
-      }).catch(console.error);
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (direction === 'left') {
+      current.scrollBy({ left: -350, behavior: 'smooth' });
     } else {
-      // Priority 2: Fallback (Open WhatsApp as an example)
-      const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + " " + shareUrl)}`;
-      window.open(whatsappUrl, "_blank");
+      current.scrollBy({ left: 350, behavior: 'smooth' });
     }
   };
 
   return (
-    <div className="carousel-section">
+    <section className="carousel-section">
       <div className="carousel-intro">
-        <div className="intro-left">
-          <span className="eyebrow"></span>
-          <h2 className="main-title">OUR INITIATIVES</h2>
-        </div>
+        <h2 className="main-title">Our Initiatives</h2>
         <p className="intro-right">
-          Impactful programs reaching across women and girls in communities.
-        </p>
+At Well Skills Development Hub, we break down the technological and literacy challenges that hinder marginalized youth from achieving their full potential. We give a new generation the tools they need to take control of their lives and rewrite stories through training and exposure to the real world.        </p>
       </div>
 
       <div className="marquee-container">
-        <div className="marquee-track">
-          {infiniteCards.map((card, i) => (
-            <div 
-              className={`initiative-card ${i % 2 !== 0 ? "offset-down" : ""}`} 
-              key={i}
-            >
-              <div className="fake-image">IMAGE</div>
+        {/* Left Navigation Arrow */}
+        <button className="nav-btn left" onClick={() => scroll('left')}>
+          <FaArrowLeft />
+        </button>
+        
+        <div className="marquee-track" ref={scrollRef}>
+          {cardsData.map((card, index) => (
+            <div className="initiative-card" key={index}>
+              <div className="card-image-wrapper">
+                <img src={card.img} alt={card.title} className="card-image" />
+                {/* Overlay arrow as seen in the image */}
+                <div className="image-action-btn">
+            
+                  <FaShareAlt className="share-icon" />
+                </div>
+              </div>
               <div className="card-content">
                 <h3>{card.title}</h3>
                 <p className="desc">{card.desc}</p>
-                <div className="card-footer">
-                  <button className="share-btn" onClick={() => handleShare(card)}>
-                    <FaShareAlt className="share-icon" /> Share
-                  </button>
-                </div>
               </div>
             </div>
           ))}
         </div>
+
+        {/* Right Navigation Arrow */}
+        <button className="nav-btn right" onClick={() => scroll('right')}>
+          <FaArrowRight />
+        </button>
       </div>
-    </div>
+    </section>
   );
 };
 

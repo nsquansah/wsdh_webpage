@@ -2,6 +2,7 @@
   
   background-color: hsl(60, 29%, 93%);
   background-image:url(../images/b2.jpg);
+  padding-top: 1em;
 
 }
 
@@ -15,17 +16,18 @@
   margin-right: 5em;
   width: 57em; /* 911px */
   min-height: 30em; /* instead of fixed height */
+  margin-top: 3em;
   
-  border: 1em solid hsl(182, 64%, 9%);
+  border: 1.2em solid hsl(182, 64%, 9%);
 }
 
 
 .leftContent {
   flex: 1;
-  padding: 1.25em;
+  padding: 1em;
   margin-top: 6em;
   text-shadow: #000000 0.06em 0.06em 0.06em;
-  width: 100;
+  width: 50%;
     
 }
 
@@ -147,6 +149,8 @@ label {
   height: auto;
   object-fit: cover;
   margin-right: 3em; 
+  border-radius: 1em;
+  padding-top: 0.7em;
 }
 
 .submitButton{

@@ -9,7 +9,7 @@
 .contactForm {
   display: flex;
   border: 5px solid black;
-  border-radius: 50px;
+  border-radius: 90px;
   max-width: 50em; /* 600px */
   margin: 0 auto;
   justify-content: flex-end;
@@ -25,9 +25,11 @@
 .leftContent {
   flex: 1;
   padding: 1em;
-  margin-top: 6em;
+  margin-top: 3em;
   text-shadow: #000000 0.06em 0.06em 0.06em;
-  width: 50%;
+  width: 70%;
+  margin-left: 2.5em;
+  line-height: 1.5;
     
 }
 
@@ -172,29 +174,51 @@ label {
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 768px) {
 
   .contactForm {
       flex-direction: column;
       width: 90%;
-      margin-right: auto;
+      height:40em;
+      margin-left: 1.2em;
+      margin-bottom: 2em;
   }
 
   .rightContent {
       width: 100%;
+      margin-top: 1em;
   }
 
   .formGroup {
       margin-bottom: 0.8em;
+      
   }
 
   .contact {
       font-size: 2.2em;
+      margin-top: 1.25em;
   }
 
   .contactus {
       width: 100%;
-      margin-top: 1.25em;
+      margin-left:1em;
   }
 
+  .imageContainer {
+    display: none; /* Hide the image on smaller screens */
+  } 
+
+
+.submitButton{
+  width: 70%;
+  margin-top: 1.25em;
+  margin-left: 0.1em;
+  line-height: 1.5;
+  
+}
+.leftContent {
+  width: 90%;
+  margin-left: 1em;
+  margin-right: 1em;
+}
 }
